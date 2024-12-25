@@ -1,10 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\sidebar-09\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\css\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\css\bootstrap\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\css\bootstrap\mixins\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\fonts\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\images\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\js\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\scss\.DS_Store" />
+    <None Include="wwwroot\sidebar-09\scss\bootstrap\.DS_Store" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.36">
