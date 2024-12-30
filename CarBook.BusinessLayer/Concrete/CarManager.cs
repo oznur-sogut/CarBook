@@ -23,7 +23,12 @@ namespace CarBook.BusinessLayer.Concrete
 			_carDal.Delete(entity);
 		}
 
-		public Car TGetByID(int id)
+        public List<Car> TGetAllCarsWithBrands()
+        {
+            return _carDal.GetAllCarsWithBrands();
+        }
+
+        public Car TGetByID(int id)
 		{
 			if (id != null)
 			{
