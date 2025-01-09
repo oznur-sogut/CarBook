@@ -16,8 +16,12 @@ builder.Services.AddScoped<IBrandService, BrandManager>();
 builder.Services.AddScoped<ICarStatusDal, EfCarStatusDal>();
 builder.Services.AddScoped<ICarStatusService, CarStatusManager>();
 
+//Constructor olarak aldýðýmýz interface'lerin beraber çalýþtýðý sýnýflarý buraya eklemekle (registiration) dipendence injection iþlemi uygulanmýþ oluyor
 builder.Services.AddScoped<ICarDal, EfCarDal>();
 builder.Services.AddScoped<ICarService, CarManager>();
+
+builder.Services.AddScoped<IPriceDal, EfPriceDal>();
+builder.Services.AddScoped<IPriceService, PriceManager>();
 
 var app = builder.Build();
 

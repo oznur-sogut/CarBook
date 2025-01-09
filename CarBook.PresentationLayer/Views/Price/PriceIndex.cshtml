@@ -1,0 +1,29 @@
+﻿@model List<Price>
+@{
+    ViewData["Title"] = "PriceIndex";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Araç Ödeme Planları</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Araç</th>
+        <th>Ödeme Planı</th>
+        <th>Fiyat</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.PriceID</td>
+            <td>@item.Car.Brand.BrandName @item.Car.CarModel</td>
+            <td>@item.PriceType</td>
+            <td>@item.PriceValue</td>
+            <td><a href="/Price/DeletePrice/@item.PriceID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Price/UpdatePrice/@item.PriceID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Price/AddPrice/" class="btn btn-primary">Yeni Araç Planlama Girişi</a>
